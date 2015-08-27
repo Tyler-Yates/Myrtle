@@ -1,5 +1,7 @@
 package com.tyleryates.util;
 
+import static com.google.common.base.Preconditions.checkArgument;
+
 /**
  * Provides efficient methods for performing complex string processing operations.
  * <p/>
@@ -13,8 +15,12 @@ public class Word {
      * Creates a new word from the given string.
      *
      * @param string the given string
+     *
+     * @throws IllegalArgumentException if {@code string} is {@code null}.
      */
     public Word(String string) {
+        checkArgument(string != null);
+
         this.string = string;
         this.characterCount = constructCharacterCount(string);
     }
