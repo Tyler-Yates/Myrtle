@@ -253,7 +253,7 @@ public class HashCountingMapTest {
 
     @Test
     public void testSubsumesEmpty() {
-        assertTrue(countingMap.subsumes(new HashCountingMap<String>()));
+        assertTrue(countingMap.subsumes(new HashCountingMap<>()));
     }
 
     @Test
